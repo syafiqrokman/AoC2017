@@ -7,7 +7,7 @@ for x in range(0,length-1):
 	if int(string[x]) == int(string[x+1]):
 		sum=sum+(int(string[x]))
 		
-# loop back last digit to first digit
+#if last digit is similar to first digit
 if int(string[length-1]) == int(string[0]):
 		sum=sum+(int(string[0]))
 	
