@@ -1,3 +1,19 @@
+#clean coding
+
+def isSameNumber(number_x,number_y):
+	if number_x == number_y:
+		return True
+	else:
+		return False
+
+def isEvenlyDivisible(numerator,denominator):
+	if numerator%denominator == 0:
+		return True
+	else:
+		return False
+		
+# def updateSumIfEvenlyDivisible
+
 input_file = open('day2input.txt')
 
 sum = 0
@@ -6,13 +22,12 @@ for line in iter(input_file):
 
 	for currentNumber in values_in_line:
 		for nextNumber in values_in_line:
-			if int(currentNumber) == int(nextNumber):
+			if isSameNumber(currentNumber,nextNumber) == True:
 				break
-			if int(currentNumber)%int(nextNumber)==0:
+			if isEvenlyDivisible(int(currentNumber),int(nextNumber)):
 				sum = sum + (int(currentNumber)/int(nextNumber))
-			elif int(nextNumber)%int(currentNumber)==0:
+			if isEvenlyDivisible(int(nextNumber),int(currentNumber)):
 				sum = sum + (int(nextNumber)/int(currentNumber))
-
 print sum
 input_file.close()
 
